@@ -11,13 +11,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Caneta</td>
-            <td>R$ 1,00</td>
-        </tr>
-        <tr>
-            <td>Caderno</td>
-            <td>R$ 2,00</td>
+
+        <tr *ngFor="let produto of produtos">
+            <td>{{produto.descricao}}</td>
+            <td>R$ {{produto.valor | number: '.2'}}</td>
         </tr>
 
     </tbody>
