@@ -5,16 +5,18 @@
 
   <table class="table table-striped">
     <thead>
-        <tr>
-          <th>Produto</th>
-          <th>Valor</th>
+        <tr class="d-flex">
+          <th class="col-md-6">Produto</th>
+          <th class="col-md-2">Valor</th>
+          <th class="col-md-4">Imagens</th>
         </tr>
     </thead>
     <tbody>
 
-        <tr *ngFor="let produto of produtos">
-            <td>{{produto.descricao}}</td>
-            <td>R$ {{produto.valor | number: '.2'}}</td>
+        <tr class="d-flex" *ngFor="let produto of produtos">
+            <td class="col-md-6">{{produto.descricao}}</td>
+            <td class="col-md-2">R$ {{produto.valor | number: '.2'}}</td>
+            <td class="imagem col-md-4"> <img src="{{produto.imagem}}" > </td>
         </tr>
 
     </tbody>
